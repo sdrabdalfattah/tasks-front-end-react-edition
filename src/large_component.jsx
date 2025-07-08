@@ -80,14 +80,14 @@ useEffect(() => {
           
         }}
       >
-        <Typography sx={{display:"flex",width:{  xs: '100%', md: '' },alignItems:"center" ,gap:"10px",fontSize: '18px', margin: 0,marginBottom:{
+        <Typography sx={{display:"flex",width:{  xs: '100%',sm:"auto", md: 'auto' },alignItems:"center" ,gap:"10px",fontSize: '18px', margin: 0,marginBottom:{
       xs: '10px',
       sm: '0px',    
     }, }}>
         < PersonIcon sx={{marginLeft:"20px"}}/>   {trueUser ? displayUsername : "your username here"}
         </Typography>
 
-        <Divider variant="middle" sx={{width:"100%",marginBottom:"10px", display:{  xs: 'flex', md: 'none' }}}/>
+        <Divider variant="middle" sx={{width:"100%",marginBottom:"10px", display:{  xs: 'flex',sm:"none", md: 'none' }}}/>
 
         <Box sx={{ display: 'flex', gap: '10px',lignItems: 'center' }}>
           <IconButton sx={{background:"rgba(97, 97, 97, 0.5)"}} aria-label="toggle-theme" onClick={toggleMode}>
@@ -186,3 +186,4 @@ useEffect(() => {
     </>
   );
 }
+
