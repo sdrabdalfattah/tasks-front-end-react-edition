@@ -6,8 +6,10 @@ import CompletedComponent from './completed';
 import LogoutModal from './logout_modal';
 import WelcomeModal from './welcome_modal';
 
+
 import axios from 'axios';
 
+import PersonIcon from '@mui/icons-material/Person';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import IconButton from '@mui/material/IconButton';
@@ -17,6 +19,7 @@ import AddIcon from '@mui/icons-material/Add';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LoginIcon from '@mui/icons-material/Login';
 import { useState, useEffect } from 'react';
+import Divider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
 
 export default function LargeComponent({ toggleMode, mode }) {
@@ -77,12 +80,14 @@ useEffect(() => {
           
         }}
       >
-        <Typography sx={{ fontSize: '18px', margin: 0,marginBottom:{
+        <Typography sx={{display:"flex",width:{  xs: '100%', md: '' },alignItems:"center" ,gap:"10px",fontSize: '18px', margin: 0,marginBottom:{
       xs: '10px',
       sm: '0px',    
     }, }}>
-          {trueUser ? displayUsername : "your username here"}
+        < PersonIcon sx={{marginLeft:"20px"}}/>   {trueUser ? displayUsername : "your username here"}
         </Typography>
+
+        <Divider variant="middle" sx={{width:"100%",marginBottom:"10px", display:{  xs: 'flex', md: 'none' }}}/>
 
         <Box sx={{ display: 'flex', gap: '10px',lignItems: 'center' }}>
           <IconButton sx={{background:"rgba(97, 97, 97, 0.5)"}} aria-label="toggle-theme" onClick={toggleMode}>
