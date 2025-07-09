@@ -144,7 +144,7 @@ const handleClose = () => {
             </>
           ) : (
             <>
-              <CircularProgress size="20px" />
+                <CircularProgress sx={{flexShrink:"0"}} size="23px" />
               <Typography>Starting server... this may take a few seconds</Typography>
             </>
           )}
